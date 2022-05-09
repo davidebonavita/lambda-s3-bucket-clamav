@@ -1,8 +1,8 @@
 #!/bin/bash
 # Check if license-checker is installed
 if ! npm list -g | grep license-checker > /dev/null 2>&1; then
-    echo "license-checker is not installed. Please install it first."
-    exit 1
+    echo "license-checker is not installed. Installing..."
+    npm install -g license-checker
 fi
 
 # license-checker --excludePackages 'internal-1;internal-2'
